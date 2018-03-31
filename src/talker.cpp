@@ -12,6 +12,7 @@
 // %EndTag(MSG_HEADER)%
 
 #include <sstream>
+#include <string>
 //Dependency for generating random numbers
 #include <cstdlib>
 #include <iostream>
@@ -22,16 +23,16 @@
 #define MAX_AGE 60
 
 //functions used for creating the message to send
-string rand_name(string[]);
+std::string rand_name(std::string[]);
 int rand_age();
-string rand_degree(string[]);
+std::string rand_degree(std::string[]);
 
 
 int main(int argc, char **argv){
 	//An array of names for the message to send	
-	string name[SIZE_NAMES] = {"Mario", "Roberto", "Mike", "Matteo", "Paolo", "Giorgio"};
+	std::string name[SIZE_NAMES] = {"Mario", "Roberto", "Mike", "Francesca", "Valentina", "Giorgio"};
 	//An array of degrees for the message to send
-	string degree[SIZE_DEGREES] = {"Informatica", "Economia", "Medicina"};
+	std::string degree[SIZE_DEGREES] = {"Informatica", "Economia", "Medicina"};
 	
 	/**
 	   * The ros::init() function needs to see argc and argv so that it can perform
@@ -98,7 +99,7 @@ int main(int argc, char **argv){
 		std_msgs::String msg;
 
 		std::stringstream ss;
-		ss << rand_name() << "|" << rand_age() << "|" << rand_degree();
+		ss << rand_name(name) << "|" << rand_age() << "|" << rand_degree(degree);
 		msg.data = ss.str();
 		// %EndTag(FILL_MESSAGE)%
 
@@ -134,7 +135,7 @@ int main(int argc, char **argv){
 /**
 * The function returns a random name from the array of string names
 */
-string rand_name(string[] names){
+std::string rand_name(std::string names[]){
 	int index = std::rand() % SIZE_NAMES;
 
 	return names[index];
@@ -144,16 +145,16 @@ string rand_name(string[] names){
 * The function returns a random integer age from 19 to MAX_AGE years old.
 */
 int rand_age(){
-	return std:rand() % (MAX_AGE - 19 + 1) + 19;
+	return std::rand() % (MAX_AGE - 19 + 1) + 19;
 }
 
 /**
 * The function returns a random degree from the array of string degrees
 */
-string rand_degree(string[] degrees){
+std::string rand_degree(std::string degrees[]){
 	int index = std::rand() % SIZE_DEGREES;
 
-	return names[index];
+	return degrees[index];
 }
 
 
