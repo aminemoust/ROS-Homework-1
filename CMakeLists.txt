@@ -137,6 +137,12 @@ include_directories(
 add_executable(${PROJECT_NAME}_talker src/talker.cpp)
 target_link_libraries(${PROJECT_NAME}_talker ${catkin_LIBRARIES})
 
+add_executable(${PROJECT_NAME}_menu_select src/menu_select.cpp)
+target_link_libraries(${PROJECT_NAME}_menu_select ${catkin_LIBRARIES})
+
+add_executable(${PROJECT_NAME}_printer src/printer.cpp)
+target_link_libraries(${PROJECT_NAME}_printer ${catkin_LIBRARIES})
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
