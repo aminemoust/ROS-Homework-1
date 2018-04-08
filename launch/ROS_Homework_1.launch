@@ -1,0 +1,7 @@
+<launch>
+
+	<node name="talker" pkg="ROS_Homework_1" type="ROS_Homework_1_talker" output="screen"/>
+	<node name="printer" pkg="ROS_Homework_1" type="ROS_Homework_1_printer" output="screen" launch-prefix="gnome-terminal --command"/>
+	<node name="menu_select" pkg="ROS_Homework_1" type="ROS_Homework_1_menu_select" output="screen" launch-prefix="gnome-terminal --command"/>
+
+</launch>
