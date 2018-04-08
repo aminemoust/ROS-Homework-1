@@ -8,7 +8,7 @@ Laboratorio Ciberfisico<br>
 A.Y. 2017/2018<br>
 University of Verona (Italy)
 
-![laboratorio ciberfisico](images/cyberphysical-lab.jpg)
+![laboratorio ciberfisico](img/cyberphysical-lab.jpg)
 
 Il compito ha l'obiettivo di realizzare un menu che in base alla selezione dell'utente, un nodo ROS stampa le informazioni ricevuto dal nodo talker, presentandole in base all'opzione scelta.
 
