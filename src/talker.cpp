@@ -8,7 +8,7 @@
 #include "ros/ros.h"
 // %EndTag(ROS_HEADER)%
 // %Tag(MSG_HEADER)%
-#include "std_msgs/String.h"
+#include <ROS_Homework_1/info.h>
 // %EndTag(MSG_HEADER)%
 
 #include <sstream>
@@ -80,7 +80,7 @@ int main(int argc, char **argv){
 	   * buffer up before throwing some away.
    	*/
 	// %Tag(PUBLISHER)%
-	ros::Publisher info_pub = n.advertise<std_msgs::String>("info", 1000);
+	ros::Publisher info_pub = n.advertise<ROS_Homework_1::info>("info", 1000);
 	// %EndTag(PUBLISHER)%
 
 	//it sends messages with frequency of 1Hz (every second)
@@ -96,15 +96,26 @@ int main(int argc, char **argv){
      			* This is a message object. The message contains name|age|degree_course.
      		*/
 		// %Tag(FILL_MESSAGE)%
-		std_msgs::String msg;
-
+		ROS_Homework_1::info msg;
+		
+		//adding the name
 		std::stringstream ss;
-		ss << rand_name(name) << "|" << rand_age() << "|" << rand_degree(degree);
-		msg.data = ss.str();
+		ss << rand_name(name);
+		msg.name = ss.str();
+		
+		//adding the age
+		msg.age =  rand_age();
+		//to clear the stringstream
+		ss.str("");
+		ss << rand_degree(degree);
+
+		//adding the degree
+		msg.degree = ss.str();
+		
 		// %EndTag(FILL_MESSAGE)%
 
 		// %Tag(ROSCONSOLE)%
-		ROS_INFO("%s", msg.data.c_str());
+		ROS_INFO("%s | %i | %s", msg.name.c_str(), msg.age, msg.degree.c_str());
 		// %EndTag(ROSCONSOLE)%
 
 		/**

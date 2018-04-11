@@ -4,6 +4,7 @@
 
 // %Tag(FULLTEXT)%
 #include "ros/ros.h"
+#include <ROS_Homework_1/info.h>
 #include "std_msgs/String.h"
 
 #include <sstream>
@@ -12,25 +13,18 @@
 int mode = -1;
 
 
-void printCallback(const std_msgs::String::ConstPtr& msg){
+void printCallback(const ROS_Homework_1::info::ConstPtr& msg){
 	if(mode == 0){
-		ROS_INFO("%s", msg->data.c_str());
+		ROS_INFO("%s | %i | %s", msg->name.c_str(), msg->age, msg->degree.c_str());
 	}else if(mode == 1){
 		//STAMPA SOLO NOME
-		int pos = msg->data.find_first_of("|");
-		ROS_INFO("%s", msg->data.substr(0, pos).c_str());
+		ROS_INFO("Nome: %s", msg->name.c_str());
 	}else if(mode == 2){
 		//STAMPA SOLO ETA'
-		int pos = msg->data.find_first_of("|");			//recupero la prima posizione di '|' nella stringa
-		int pos_second = msg->data.find_last_of("|");	//recupero la seconda posizione di '|' nella stringa
-
-		ROS_INFO("%s", msg->data.substr(pos+1, pos_second - pos - 1).c_str()); //estraggo la substring
-										 	//da pos + 1 con con lun. = pos_second - pos -1
+		ROS_INFO("Eta': %i", msg->age); 
 	}else if(mode == 3){
 		//STAMPA SOLO CORSO
-		int pos_last = 	msg->data.find_last_of("|");	//recupero la seconda posizione di '|' nella stringa
-		
-		ROS_INFO("%s", msg->data.substr(pos_last+1).c_str());
+		ROS_INFO("Corso: %s", msg->degree.c_str());
 	
 	}
 		
@@ -40,8 +34,7 @@ void task(char op){
 	switch(op){
 		case 'a':
 							//TODO STAMPA TUTTO
-							mode = 0;
-							//sub_msg = n.subscribe("info", 1000, printCallback);		
+							mode = 0;	
 							break;
 
 		case 'n':
