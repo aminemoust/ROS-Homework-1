@@ -12,6 +12,32 @@ University of Verona (Italy)
 
 Il compito ha l'obiettivo di realizzare un menu che in base alla selezione dell'utente, un nodo ROS stampa le informazioni ricevuto dal nodo talker, presentandole in base all'opzione scelta.
 
-# Installazione:
+## Installazione:
+  ### Prerequisiti:
+  Cosa serve prima dell'installazione:
+  ```
+  -ROS Kinetic
+  -Ubuntu 16.04
+  ```
+  Come clonare il package:
+  ```
+  -aprire il terminale
+  -cd ~/catkin_ws
+  -cd src/
+  -git clone URL_DA_CLONARE
+  ```
+  Per installare il package:
+  ```
+  -aprire il terminale
+  -cd ~/catkin_ws
+  -catkin_make install
+  ```
+## Eseguire il launcher:
+   Per eseguire il launcher:
+   ```
+  -aprire il terminale
+  -cd ~/catkin_ws
+  -roslaunch PACKAGE_NAME PACKAGE_NAME.launch   (In questo caso PACKAGE_NAME è ROS_Homework_1)
+  ```
 
 First assignment of cyber-physical laboratory
