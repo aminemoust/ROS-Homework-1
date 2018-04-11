@@ -12,5 +12,6 @@ University of Verona (Italy)
 
 Il compito ha l'obiettivo di realizzare un menu che in base alla selezione dell'utente, un nodo ROS stampa le informazioni ricevuto dal nodo talker, presentandole in base all'opzione scelta.
 
+# Installazione:
 
 First assignment of cyber-physical laboratory
