@@ -39,5 +39,7 @@ Il compito ha l'obiettivo di realizzare un menu che in base alla selezione dell'
   -cd ~/catkin_ws
   -roslaunch PACKAGE_NAME PACKAGE_NAME.launch   (In questo caso PACKAGE_NAME è ROS_Homework_1)
   ```
+  Una volta eseguito il launcher si dovrebbe ottenere una schermata di questo tipo:
+  ![Esecuzione](img/example_run.png)
 
 First assignment of cyber-physical laboratory
