@@ -21,7 +21,7 @@ void printCallback(const ROS_Homework_1::info::ConstPtr& msg){
 		ROS_INFO("Nome: %s", msg->name.c_str());
 	}else if(mode == 2){
 		//STAMPA SOLO ETA'
-		ROS_INFO("Eta': %i", msg->age); 
+		ROS_INFO("Eta': %u", msg->age); 
 	}else if(mode == 3){
 		//STAMPA SOLO CORSO
 		ROS_INFO("Corso: %s", msg->degree.c_str());
@@ -33,22 +33,18 @@ void printCallback(const ROS_Homework_1::info::ConstPtr& msg){
 void task(char op){
 	switch(op){
 		case 'a':
-							//TODO STAMPA TUTTO
 							mode = 0;	
 							break;
 
 		case 'n':
-							//TODO STAMPA NOME
 							mode = 1;							
 							break;
 
 		case 'e':
-							//TODO STAMPA ETA'
 							mode = 2;							
 							break;
 
 		case 'c':
-							//TODO STAMPA CORSO
 							mode = 3;							
 							break;
 
