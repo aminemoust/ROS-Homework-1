@@ -115,7 +115,7 @@ int main(int argc, char **argv){
 		// %EndTag(FILL_MESSAGE)%
 
 		// %Tag(ROSCONSOLE)%
-		ROS_INFO("%s | %i | %s", msg.name.c_str(), msg.age, msg.degree.c_str());
+		ROS_INFO("%s | %u | %s", msg.name.c_str(), msg.age, msg.degree.c_str());
 		// %EndTag(ROSCONSOLE)%
 
 		/**
