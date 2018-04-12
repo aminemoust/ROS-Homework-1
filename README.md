@@ -56,5 +56,19 @@ Si occupa di stampare a video le informazioni ricevuto dal talker in base all'op
 
 
 ## Scelta progettuale:
-Il tipo di messaggio è un messaggio custom
+Il tipo di messaggio è un messaggio custom, con 3 campi:
+```
+  -name:  di tipo string che contiene un nome;
+  -age: di tipo uint8 che contiene un'età;
+  -degree:  di tipo string che contiene un corso di laurea;
+```
+La scelta di usare tre campi, invece di un std_msgs, è dovuta dal fatto di semplificare la ricezione dei dati.
+Un parsing della stringa sarebbe stato inutilemente complicato e meno efficiente in termini di prestazioni.
+
+Il campo **"age"** è di tipo uint8, in quanto si suppone che l'età di una persona non superi i 255 anni.
+
+Si è scelto di mettere il controllo dell'opzione scelta dall'utente nel modulo **printer** per rendere al modulo **talker**, un invio dei dati "veloce".
+N.B.: Mettere il controllo dell'opzione direttamente nel **talker** può essere una soluzione plausibile e probabilmente renderebbe la stampa al **printer** quasi in "real-time". Dall'altro canto questa soluzione potrebbe rendere meno efficiente il **talker** se riceve molte informazioni dal **menu_select**.
+
+
 First assignment of cyber-physical laboratory
