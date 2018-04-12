@@ -42,4 +42,19 @@ Il compito ha l'obiettivo di realizzare un menu che in base alla selezione dell'
   Una volta eseguito il launcher si dovrebbe ottenere una schermata di questo tipo:
   ![Esecuzione](img/example_run.png)
 
+## Grafo di esecuzione:
+![grafo del package](img/graph.png)
+
+### Talker
+Genera le informazioni e le invia nel topic "info"
+
+### Menu_select:
+Stampa a video un menu di selezione e invia l'opzione selezionata dall'utente nel topic "menu"
+
+### Printer:
+Si occupa di stampare a video le informazioni ricevuto dal talker in base all'opzione selezionata dall'utente
+
+
+## Scelta progettuale:
+Il tipo di messaggio è un messaggio custom
 First assignment of cyber-physical laboratory
