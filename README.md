@@ -67,8 +67,10 @@ Un parsing della stringa sarebbe stato inutilemente complicato e meno efficiente
 
 Il campo **"age"** è di tipo uint8, in quanto si suppone che l'età di una persona non superi i 255 anni.
 
-Si è scelto di mettere il controllo dell'opzione scelta dall'utente nel modulo **printer** per rendere al modulo **talker**, un invio dei dati "veloce".
+Si è scelto di mettere il controllo dell'opzione scelta dall'utente nel modulo **printer** per rendere al modulo **talker**, un invio dei dati "veloce".<br>
 N.B.: Mettere il controllo dell'opzione direttamente nel **talker** può essere una soluzione plausibile e probabilmente renderebbe la stampa al **printer** quasi in "real-time". Dall'altro canto questa soluzione potrebbe rendere meno efficiente il **talker** se riceve molte informazioni dal **menu_select**.
 
 
 First assignment of cyber-physical laboratory
+For any suggestion/bugs/typos report to <br>
+amine.moustaghfir@studenti.univr.it
