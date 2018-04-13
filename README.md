@@ -71,6 +71,6 @@ Si è scelto di mettere il controllo dell'opzione scelta dall'utente nel modulo 
 N.B.: Mettere il controllo dell'opzione direttamente nel **talker** può essere una soluzione plausibile e probabilmente renderebbe la stampa al **printer** quasi in "real-time". Dall'altro canto questa soluzione potrebbe rendere meno efficiente il **talker** se riceve molte informazioni dal **menu_select**.
 
 
-First assignment of cyber-physical laboratory
+First assignment of cyber-physical laboratory<br>
 For any suggestion/bugs/typos report to <br>
 amine.moustaghfir@studenti.univr.it
