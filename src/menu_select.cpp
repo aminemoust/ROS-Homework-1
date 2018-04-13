@@ -27,17 +27,17 @@ char select(){
 	std::cout << "\tn)Stampa solo il nome" << std::endl;
 	std::cout << "\te)Stampa solo l'eta'" << std::endl;
 	std::cout << "\tc)Stampa solo il corso di laurea" << std::endl;
-	std::cout << "\t0)Esci dal menu" << std::endl;
+	std::cout << "\tq)Esci dal menu" << std::endl;
 	std::cout << std::endl;
 
 	std::getline(std::cin, opt);
 	//repeat until the option is correct
-	while(opt.length() != 1 || (opt != "a" && opt != "n" && opt != "e" && opt != "c" && opt != "0")){
+	while(opt.length() != 1 || (opt != "a" && opt != "n" && opt != "e" && opt != "c" && opt != "q")){
 		std::cout << "ERROR: Invalid Input!" << std::endl;
 		std::getline(std::cin, opt);
 	};
 
-	if(opt == "0")
+	if(opt[0] == 'q')
 		std::exit(0);
 
 	return opt[0];
